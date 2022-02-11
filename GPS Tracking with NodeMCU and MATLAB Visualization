@@ -1,0 +1,8 @@
+//GPS Tracking with NodeMCU and MATLAB Visualization
+//In ThingSpeak we can create Map Visualizations in order to track the location of a cargo at a specific time. We create MATLAB Visualization and through code we can choose which //variables to show(e.g. Temperature), including the Latitude and Longitude variables for printing a mark on the map.
+
+lat = thingSpeakRead(yourChannelID,'Fields',3,'ReadKey','yourReadKey','NumPoints',3,'Timeout',50);
+lon = thingSpeakRead(yourChannelID,'Fields',4,'ReadKey','yourReadKey','NumPoints',3,'Timeout',50);
+temp = thingSpeakRead(yourChannelID,'Fields',1,'ReadKey','yourReadKey','NumPoints',3,'Timeout',50);
+geoscatter(lat,lon,temp,'red','filled');
+geobasemap('streets');
