@@ -1,2 +1,23 @@
 # Real-Time-Monitoring-and-Notification-System-for-the-Transport-of-Vulnerable-Products-with-use-of-Io
 This project focuses on the integration of hardware, software and cloud services to support the rapid creation of solutions capable of achieving the security of goods through the use of IoT devices and Cloud services.
+
+Issue
+
+In recent years, due to the rapid development of technology and the easy access of every human being to modern means of communication, there has been a rapid growth in world trade and product transportation. This development has created new challenges for the business and research world, which are now called upon to find effective ways to manage the transport of vulnerable products and medicines. In particular, this need became urgent with the outbreak of the Covid-19 pandemic where the scientific community and government agencies were immediately called upon to find reliable means of storage and transportation so that pandemic vaccines could be safely stored as they required maintenance at temperatures up to - 70ºC and demand was unprecedentedly high. For example, on January 20, 2021, authorities in Michigan announced that nearly 12,000 doses of the Moderna Covid-19 vaccine had been destroyed due to malfunctioning temperature control during shipment, and in Maine, more than 16,000 doses of the vaccine had been damaged. This need is met by the development of systems that provide optimum temperature during storage and transport of products at each stage of their journey, known as cold-chain.
+
+Proposed Solution
+
+The purpose of this project is to create a platform for electronic monitoring and export of environmental indicators to support decision-making regarding the launch and use of transported products. This system is checked and tested to determine its effectiveness, accuracy and usefulness.
+More specifically, a system has been created using Arduino boards and sensors that measure temperature and humidity. IR Receivers and Transmitters have been used to decode and clone signals from the room air conditioner and with proper testing the corresponding on / off signals are sent so that the temperature remains at the level we need. Then through NodeMCU the system connects to the WiFi network and it sends the data to the Cloud and specifically to “https://thingspeak.com/” where they are presented graphically. Email alerts have been created which notify the administrator of a possible alteration of the desired environmental conditions.
+So, in the case that temperature is not 20ºC the air conditioner turns on(if it is 20ºC it turns off) and an email alert is sent. Last but not least, Map Visualizations for GPS tracking have been created through MATLAB code.
+
+Value
+
+The present work provides a theoretical but mainly practical contribution to the advancement of cold chain knowledge, as it takes into account the realistic needs of trade and supply chains according to the real industry and especially according to the new needs that have arisen and become widely known worldwide for the distribution of COVID-19 vaccines. The quality of food and medical products has a significant impact on people's lives and represents a significant part of the cost of healthcare and living standards in general. The system created aims to assist companies and institutions in the decision-making process. Monitoring and controlling the temperature of products with an intelligent cold chain system provides information to all those involved in the distribution chain and they can use it to improve the cold chain, studying weaknesses and deciding which parts to improve.
+With this system, we explored the use of low cost devices to quickly create a system template. In particular, the system focuses on the integration of hardware, software and cloud services to support the rapid creation of solutions capable of achieving the security of goods through the use of IoT devices and Cloud services. The use of IoT technologies in the industrial sector can maximize productivity and reduce costs, while creating new sources of revenue and helping to manage complex supply chains, to anticipate risks and minimize losses. IoT technologies can also be used to optimize power consumption and space usage. In addition, it is possible to create safe conditions for employees and save money due to effective heating control.
+To give an idea of what "low cost" means, it is stated that the total amount spent for each device purchased for the implementation of the entire system is about 60 €.
+
+The project and more images can be found here:
+https://create.arduino.cc/projecthub/vpapoglou/monitoring-system-for-cold-chain-operations-34f71e
+and here:
+https://thingspeak.com/channels/1613446
