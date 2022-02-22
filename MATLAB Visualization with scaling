@@ -1,10 +1,12 @@
-//MATLAB Visualization with scaling
-//This is a different version of the previous one. The marks on the map are as big as the value of a variable that we choose. In this case the mark is as big as the value of //temperature.
-//For easy testing we could send data manually to our ThingSpeak variables through the browser:
-//https://api.thingspeak.com/update?api_key=yourWriteAPIKey&field4=?&field3=?&field1=?
+/* MATLAB Visualization with scaling
+This is a different version of the previous one. The marks on the map are as big as the value of a variable that we choose. In this case the mark is as big as the value of temperature.
+For easy testing we could send data manually to our ThingSpeak variables through the browser: (in my case field4 was the longitude, field3 the latitude and field1 the temperature)
+https://api.thingspeak.com/update?api_key=yourWriteAPIKey&field4=?&field3=?&field1=? */
 
+// the <'NumPoints',3> indicates that the last 3 values will be shown
 lat = thingSpeakRead(yourChannelID,'Fields',3,'ReadKey','yourReadKey','NumPoints',3,'Timeout',50);
 lon = thingSpeakRead(yourChannelID,'Fields',4,'ReadKey','yourReadKey','NumPoints',3,'Timeout',50);
 temp = thingSpeakRead(yourChannelID,'Fields',1,'ReadKey','yourReadKey','NumPoints',3,'Timeout',50);
+//indicate how map will look like
 geobasemap('streets');
 geobubble(lat,lon,temp,zoom=5);
